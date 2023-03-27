@@ -14,12 +14,18 @@ resource "aws_vpc" "default" {
     }
 }
 
-resource "aws_subnet" "subnet" {
-  count = 4
+variable "subnet_count" {
+  default = 2
+}
+
+resource "aws_subnet" "public_subnet" {
+  count = var.subnet_count
   cidr_block = "10.0.${count.index}.0/24"
-  vpc_id = resource.aws_vpc.default.id
+  vpc_id = aws_vpc.default.id
   availability_zone = "us-east-1a"
+  map_public_ip_on_launch = true
+
   tags = {
-    Name = "subnet-${count.index}"
+    Name = "public-subnet-${count.index}"
   }
 }
