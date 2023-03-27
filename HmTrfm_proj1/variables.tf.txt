@@ -3,5 +3,5 @@ variable "aws_secret_key" {}
 variable "aws_region" {}
 variable "vpc_cidr" {}
 variable "vpc_name" {}
-variable "subnet_name" {}
-variable "subnet_cidr" {}
+variable "public_subnet_name" {}
+variable "public_subnet_cidr" {}
