@@ -1,0 +1,7 @@
+aws_access_key = "AKIAT3ZODDXAMZYRRERN"
+aws_secret_key = "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"
+aws_region = "us-east-1"
+vpc_cidr = "10.0.0.0/16"
+vpc_name = "terraform-aws-testing"
+subnet_name = "Terraform_Public_Subnet-testing"
+subnet_cidr = "10.1.1.0/24"
